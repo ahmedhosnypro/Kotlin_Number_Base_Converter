@@ -3,50 +3,56 @@ package converter
 import kotlin.system.exitProcess
 
 object CLI {
-    fun start() {
-        var toContinue = true
-        while (toContinue) {
-            toContinue = runCommand()
+    fun fstLvlMenu() {
+        print(
+            "Enter two numbers in format:" +
+                    " {source base} {target base} (To quit type /exit) "
+        )
+
+        val input: String = readln()
+        if (input != "/exit") {
+            val bases = input.split(" ")
+            if (bases.size == 2) {
+                var sourceBase: Int
+                var targetBase: Int
+                while (true) {
+                    try {
+                        sourceBase = bases[0].toInt()
+                        targetBase = bases[1].toInt()
+                        return sndLvlMenu(sourceBase, targetBase)
+                    } catch (e: NumberFormatException) {
+                        println("Invalid Base, try again")
+                    }
+                }
+            } else {
+                println("Invalid Base, try again")
+                return fstLvlMenu()
+            }
         }
+        exitProcess(0)
     }
 
-    private fun runCommand(): Boolean {
-        val command = selectCommand()
+    private fun sndLvlMenu(sourceBase: Int, targetBase: Int) {
+        print(
+            "Enter number in base " + sourceBase + " to convert" +
+                    " to base " + targetBase + " (To go back type /back) "
+        )
 
-        val decimalConverter: BaseConverter = ConverterFactory.createConverter()
+        val input: String = readln().uppercase()
 
-        val out = StringBuilder()
-        return when (command) {
-            Command.FROM -> {
-                val decimalNumber = InputReader.getDecimalString()
-                val targetBase = InputReader.targetBaseAsString()
-                out.append("Conversion result: ")
-                out.append(decimalConverter.fromBaseConvert(decimalNumber, targetBase))
-                println(out.toString())
-                true
-            }
-            Command.TO -> {
-                val sourceNumber = InputReader.getHexValue()
-                val sourceBase = InputReader.sourceBaseAsString()
-                out.append("Conversion to decimal result: ")
-                out.append(decimalConverter.toBaseConverter(sourceNumber, sourceBase))
-                println(out)
-                true
-            }
-            Command.EXIT -> exitProcess(0)
-        }
-    }
+        if ((input == "/BACK")) {
+           return fstLvlMenu()
+        } else {
+            while (true) {
+                return if (input.matches(Regex(".*\\d\\w.*|.*\\w.*"))) {
+                    val out: String = BaseConverter.convert(input, sourceBase, targetBase)
+                    println("Conversion result: $out\n")
 
-
-    private fun selectCommand(): Command {
-        print("Do you want to convert /from decimal or /to decimal? (To quit type /exit) ")
-        val inputCommand: String = readln().replace("/", "").uppercase()
-
-        while (true) {
-            try {
-                return Command.valueOf(inputCommand)
-            } catch (e: IllegalArgumentException) {
-                // ignored
+                    sndLvlMenu(sourceBase, targetBase)
+                } else {
+                    println("Invalid Number, try again")
+                    sndLvlMenu(sourceBase, targetBase)
+                }
             }
         }
     }

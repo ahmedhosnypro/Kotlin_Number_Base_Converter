@@ -536,6 +536,94 @@ files:
         }
     }
   learner_created: false
+- name: src/converter/DecimalConverter.kt
+  visible: true
+  text: |-
+    package converter
+
+    import java.util.*
+    import kotlin.math.pow
+
+    class DecimalConverter : BaseConverter() {
+        override fun fromBaseConvert(decimalNumber: String, targetBase: String): String {
+            var quotient = decimalNumber.toInt()
+            val base = targetBase.toInt()
+            var remainder: Int
+
+            val list = LinkedList<String>()
+
+            while (quotient > 0) {
+                remainder = quotient % base
+                quotient /= base
+                if (base == 2 || base == 8 || base == 10) {
+                    list.addFirst(remainder.toString())
+                } else if (base == 16) {
+                    list.addFirst(hexMap[remainder] ?: remainder.toString())
+                }
+            }
+            val out = StringBuilder()
+            for (N in list) {
+                out.append(N)
+            }
+            return out.toString()
+        }
+
+        override fun toBaseConverter(sourceNumber: String, sourceBase: String): String {
+            val base = sourceBase.toInt()
+            var result = 0
+
+            val is2Or8 = base == 2 || base == 8
+            if (is2Or8) {
+                var digit = sourceNumber.toInt()
+                var power = 0
+                var tmpResult: Int
+                while (digit > 0) {
+                    val n = digit % 10
+                    tmpResult = (n * base.toDouble().pow(power.toDouble())).toInt()
+                    result += tmpResult
+                    digit /= 10
+                    power++
+                }
+            } else if (base == 16) {
+                var digit: Int
+                var tmpResult: Int
+                for ((power, i) in (sourceNumber.length - 1 downTo 0).withIndex()) {
+                    val ch = sourceNumber[i]
+                    digit = reversedHexMap[ch.toString()] ?: (ch.code - 48)
+                    tmpResult = (digit * base.toDouble().pow(power.toDouble())).toInt()
+                    result += tmpResult
+                }
+            }
+            return result.toString()
+        }
+    }
+  learner_created: true
+- name: src/converter/BaseConverter.kt
+  visible: true
+  text: |-
+    package converter
+
+    abstract class BaseConverter {
+        var hexMap = mapOf(
+            10 to "A", 11 to "B", 12 to "C",
+            13 to "D", 14 to "E", 15 to "F"
+        )
+        var reversedHexMap = mapOf(
+            "A" to 10, "B" to 11, "C" to 12,
+            "D" to 13, "E" to 14, "F" to 15
+        )
+
+        abstract fun fromBaseConvert(decimalNumber: String, targetBase: String): String?
+
+        abstract fun toBaseConverter(sourceNumber: String, sourceBase: String): String?
+    }
+  learner_created: true
+- name: src/converter/CLI.kt
+  visible: true
+  learner_created: true
 feedback_link: https://hyperskill.org/learn/step/12347#comment
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: Wed, 08 Jun 2022 08:39:21 UTC
 record: -1
