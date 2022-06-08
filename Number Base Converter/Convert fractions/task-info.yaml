@@ -563,6 +563,143 @@ files:
     \ 1 == resultIndex;\n            }\n            \n        } else {\n         \
     \   return true;\n        }\n        \n    }\n}\n"
   learner_created: false
+- name: src/converter/BaseConverter.kt
+  visible: true
+  text: |-
+    package converter
+
+    object BaseConverter {
+        fun convert(strNum: String, sourceBase: Int, targetBase: Int): String {
+            val decimal = DecimalConverter.toDecimalConverter(strNum, sourceBase)
+            return DecimalConverter.fromDecimalConvert(decimal, targetBase)
+        }
+    }
+  learner_created: true
+- name: src/converter/CLI.kt
+  visible: true
+  text: |-
+    package converter
+
+    import kotlin.system.exitProcess
+
+    object CLI {
+        fun fstLvlMenu() {
+            print(
+                "Enter two numbers in format:" +
+                        " {source base} {target base} (To quit type /exit) "
+            )
+
+            val input: String = readln()
+            if (input != "/exit") {
+                val bases = input.split(" ")
+                if (bases.size == 2) {
+                    var sourceBase: Int
+                    var targetBase: Int
+                    while (true) {
+                        try {
+                            sourceBase = bases[0].toInt()
+                            targetBase = bases[1].toInt()
+                            return sndLvlMenu(sourceBase, targetBase)
+                        } catch (e: NumberFormatException) {
+                            println("Invalid Base, try again")
+                        }
+                    }
+                } else {
+                    println("Invalid Base, try again")
+                    return fstLvlMenu()
+                }
+            }
+            exitProcess(0)
+        }
+
+        private fun sndLvlMenu(sourceBase: Int, targetBase: Int) {
+            print(
+                "Enter number in base " + sourceBase + " to convert" +
+                        " to base " + targetBase + " (To go back type /back) "
+            )
+
+            val input: String = readln().uppercase()
+
+            if ((input == "/BACK")) {
+               return fstLvlMenu()
+            } else {
+                while (true) {
+                    return if (input.matches(Regex(".*\\d\\w.*|.*\\w.*"))) {
+                        val out: String = BaseConverter.convert(input, sourceBase, targetBase)
+                        println("Conversion result: $out\n")
+
+                        sndLvlMenu(sourceBase, targetBase)
+                    } else {
+                        println("Invalid Number, try again")
+                        sndLvlMenu(sourceBase, targetBase)
+                    }
+                }
+            }
+        }
+    }
+  learner_created: true
+- name: src/converter/ToDecimalBaseConverter.kt
+  visible: true
+  text: |-
+    package converter
+
+    import java.math.BigInteger
+    import java.util.*
+
+    object DecimalConverter  {
+        fun toDecimalConverter(strNum: String, sourceBase: Int): BigInteger {
+            var result = BigInteger.ZERO
+            var digit = 0
+            val base = BigInteger.valueOf(sourceBase.toLong())
+            var tmpResult: BigInteger?
+            for ((power, i) in (strNum.length - 1 downTo 0).withIndex()) {
+                val ch = strNum[i]
+                when (ch.code) {
+                    in 48..57 -> {
+                        digit = ch.code - 48
+                    }
+                    in 65..90 -> {
+                        digit = ch.code - 55
+                    }
+                    in 97..122 -> {
+                        digit = ch.code - 87
+                    }
+                }
+                tmpResult = BigInteger.valueOf(digit.toLong()).multiply(base.pow(power))
+                result = result.add(tmpResult)
+            }
+            return result
+        }
+
+        fun fromDecimalConvert(decimalNumber: BigInteger, targetBase: Int): String {
+            var quotient = decimalNumber
+            var remainder: Int
+            val list = LinkedList<String>()
+            while (quotient != BigInteger.ZERO) {
+                remainder = quotient.remainder(BigInteger.valueOf(targetBase.toLong())).toString().toInt()
+                quotient = quotient.divide(BigInteger.valueOf(targetBase.toLong()))
+                if (remainder <= 9) {
+                    list.addFirst(remainder.toString())
+                } else {
+                    val ch = (remainder + 55).toChar()
+                    list.addFirst(ch.toString())
+                }
+            }
+            val out = StringBuilder()
+            for (N in list) {
+                out.append(N)
+            }
+            return out.toString()
+        }
+    }
+  learner_created: true
+- name: src/converter/FromDecimalBaseConverter.kt
+  visible: true
+  learner_created: true
 feedback_link: https://hyperskill.org/learn/step/12348#comment
-status: Unchecked
+status: Solved
+feedback:
+  message: Well done! You've finished the project. Select a new project on <a href="https://hyperskill.org/projects">JetBrains
+    Academy</a> to continue learning.
+  time: Wed, 08 Jun 2022 12:22:29 UTC
 record: -1

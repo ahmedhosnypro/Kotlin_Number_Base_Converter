@@ -1,5 +1,6 @@
 package converter
 
+import converter.BaseConverter.convert
 import kotlin.system.exitProcess
 
 object CLI {
@@ -44,8 +45,8 @@ object CLI {
            return fstLvlMenu()
         } else {
             while (true) {
-                return if (input.matches(Regex(".*\\d\\w.*|.*\\w.*"))) {
-                    val out: String = BaseConverter.convert(input, sourceBase, targetBase)
+                return if (input.matches(Regex(".*\\d.*|.*\\w.*+\\.+.*\\d.*|.*\\w.*"))) {
+                    val out = convert(input, sourceBase, targetBase)
                     println("Conversion result: $out\n")
 
                     sndLvlMenu(sourceBase, targetBase)
