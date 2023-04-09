@@ -3,14 +3,15 @@ package converter
 import converter.BaseConverter.convert
 import java.util.*
 
+
 object Menu {
-    private var scanner = Scanner(System.`in`)
+
     fun fstLvlMenu() {
         print(
             "Enter two numbers in format:" +
                     " {source base} {target base} (To quit type /exit) "
         )
-        val input = scanner.nextLine().trim { it <= ' ' }
+        val input = readln().trim { it <= ' ' }
         if (input != "/exit") {
             val bases = input.split(" ".toRegex()).dropLastWhile { it.isEmpty() }.toTypedArray()
             if (bases.size == 2) {
@@ -39,12 +40,12 @@ object Menu {
             "Enter number in base " + sourceBase + " to convert" +
                     " to base " + targetBase + " (To go back type /back) "
         )
-        val input = scanner.nextLine().trim { it <= ' ' }.uppercase(Locale.getDefault())
+        val input = readln().trim { it <= ' ' }.uppercase(Locale.getDefault())
         if ((input == "/BACK")) {
             fstLvlMenu()
         } else {
             while (true) {
-                if (input.matches(".*\\d\\w.*|.*\\w.*".toRegex())) {
+                if (input.matches(".*\\d.*|.*\\w.*+\\.+.*\\d.*|.*\\w.*".toRegex())) {
                     val out = convert(input, sourceBase, targetBase)
                     println("Conversion result: $out")
                     println()
