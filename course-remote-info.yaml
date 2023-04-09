@@ -3,7 +3,7 @@ hyperskill_project:
   ide_files: https://stepik.org/media/attachments/lesson/495737/additional_files.json
   is_template_based: false
   use_ide: true
-update_date: Wed, 08 Jun 2022 07:51:49 UTC
+update_date: "Sun, 09 Apr 2023 11:18:33 UTC"
 stages:
 - id: 856
   step: 12345
@@ -21,6 +21,8 @@ topics:
   0:
   - title: Binary numbers
     theory_id: 5544
+  - title: Hexadecimal numbers
+    theory_id: 8788
   - title: Converting from decimal to binary
     theory_id: 5614
   - title: Octal numbers
@@ -41,14 +43,14 @@ topics:
     theory_id: 4388
   - title: The classification of basic types
     theory_id: 4455
+  - title: Type conversion
+    theory_id: 4672
   - title: Standard output
     theory_id: 4425
   - title: Invoking functions
     theory_id: 4575
-  - title: Standard input
+  - title: Standard input with Java Scanner
     theory_id: 4445
-  - title: Type conversion
-    theory_id: 4672
   - title: Reading data with a readln
     theory_id: 11224
   - title: String basics
@@ -73,9 +75,17 @@ topics:
     theory_id: 4643
   - title: While loops
     theory_id: 4659
+  - title: Ranges
+    theory_id: 4633
+  - title: When expression
+    theory_id: 4631
   1:
   - title: Converting from binary to decimal
     theory_id: 5622
+  - title: Computer programming
+    theory_id: 8739
+  - title: Paradigms
+    theory_id: 15860
   - title: Comments
     theory_id: 4406
   - title: Coding style conventions
@@ -84,20 +94,32 @@ topics:
     theory_id: 4389
   - title: Declaring functions
     theory_id: 4580
+  - title: Errors in programs
+    theory_id: 11559
+  - title: Introduction to OOP
+    theory_id: 3614
   - title: Objects
     theory_id: 11233
+  - title: Declaring classes
+    theory_id: 6200
   - title: Equality
     theory_id: 11236
   - title: Unicode
     theory_id: 7899
   - title: Characters
     theory_id: 4680
-  - title: Ranges
-    theory_id: 4633
-  - title: For loop and ranges
-    theory_id: 4652
+  - title: Functional decomposition
+    theory_id: 12668
+  - title: Default arguments
+    theory_id: 4637
+  - title: Named arguments
+    theory_id: 4640
+  - title: Constructors
+    theory_id: 10740
   - title: Introduction to MutableList
     theory_id: 14879
+  - title: For loop and ranges
+    theory_id: 4652
   - title: Work with MutableLists
     theory_id: 14902
   - title: For loop and lists
@@ -108,9 +130,23 @@ topics:
     theory_id: 8535
   - title: Processing strings
     theory_id: 9027
+  - title: What is a bug
+    theory_id: 5504
+  - title: Introduction to logging
+    theory_id: 5538
+  - title: Debugging techniques
+    theory_id: 13739
+  - title: Debugging overview
+    theory_id: 14368
+  - title: Debugging simple constructs
+    theory_id: 15503
+  - title: What is an exception
+    theory_id: 7243
   2:
   - title: BigInteger
     theory_id: 7964
   3:
+  - title: "Decimal to binary: fractions"
+    theory_id: 11938
   - title: BigDecimal
     theory_id: 12536

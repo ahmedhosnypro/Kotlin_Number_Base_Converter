@@ -1,5 +1,5 @@
 package converter
 
 fun main() {
-    CLI.fstLvlMenu()
+    Menu.fstLvlMenu()
 }

@@ -176,8 +176,6 @@ v
 FTopics/Jumps and returns/Getting letters from the Alphabet/src/Main.kt,6\2\621988cae454fa6b4d33e9486613200b6cba8e16
 g
 7Topics/Jumps and returns/Placement of ships/src/Main.kt,8\8\88956234202f50132a894264817106dd5ad089fb
-[
-+Topics/Jumps and returns/Theory/src/Main.kt,5\d\5dc3dcf0ac98e9672b4f82da9446d52ff00933bd
 f
 6Topics/Jumps and returns/Unique characters/src/Main.kt,1\8\1803a15a9cfba31ccae9b35664cb445831d6c41d
 o
@@ -204,3 +202,91 @@ d
 4Topics/Jumps and returns/Unique characters/task.html,1\b\1bee0c89d7646fc4e4bc4c2bb91e5617a369d9d7
 m
 =Topics/Jumps and returns/Whole truth about continue/task.html,8\4\8468528f9103c6ddd373e660a92c398ae7de56dd
+†
+p.idea/modules/Topics/BigDecimal/Round and power/Number_Base_Converter.Topics-BigDecimal-Round_and_power.test.iml,2\e\2e57dfc9cc4d1d171a7a32b64020d8d1f4742d12
+†
+p.idea/modules/Topics/BigDecimal/Round and power/Number_Base_Converter.Topics-BigDecimal-Round_and_power.main.iml,6\e\6e35381b34bd17df6feac22778661db6aa17f741
+õ
+k.idea/modules/Topics/BigDecimal/Round and power/Number_Base_Converter.Topics-BigDecimal-Round_and_power.iml,4\b\4b25f185d9f715e680c1d5990374e8f94075b50d
+ê
+`.idea/modules/Topics/BigDecimal/Average/Number_Base_Converter.Topics-BigDecimal-Average.main.iml,7\d\7d2e07a633c646de715c54e826fc34d4b4039ce1
+ã
+[.idea/modules/Topics/BigDecimal/Average/Number_Base_Converter.Topics-BigDecimal-Average.iml,4\b\4b9843a7fd6fd931aca0c0a33cec7aa4176cc3f8
+ê
+`.idea/modules/Topics/BigDecimal/Average/Number_Base_Converter.Topics-BigDecimal-Average.test.iml,4\1\413b0131ee1f9c97d69b979991fcc33a9dc58bfe
+_
+/Topics/BigDecimal/Average/task-remote-info.yaml,a\5\a5df0df7e2c5421a783bbc2010ccf3150aa13e0e
+X
+(Topics/BigDecimal/Average/task-info.yaml,2\7\273970036cbbc10b4160d6ecf609fcba57f8ba89
+H
+Topics/section-info.yaml,f\1\f1b11f0c1c7545bbcd7362ca8e7f57e782e9e5d9
+S
+#.idea/sonarlint/issuestore/index.pb,9\f\9fe84ebb15faf917b7def6236dba604453cc61e0
+_
+/Topics/BigDecimal/Initialization/task-info.yaml,2\4\2476a9d39192b71ae465351a29ae01802d0739ec
+f
+6Topics/BigDecimal/Initialization/task-remote-info.yaml,d\f\dfc3d5a932b7b8d3a91be54ce15fd73e8d159cd1
+f
+6Number Base Converter/Convert fractions/task-info.yaml,a\f\afb1765a1341f5a44375b7f36ed037dde01ea180
+W
+'Topics/BigDecimal/Theory/task-info.yaml,d\0\d040015d61c1e9232e4bcdf5a33ea0e9e610eb4c
+h
+8Number Base Converter/Convert to any base/task-info.yaml,e\8\e8bd96e3d395e39c0b3fe8cb7b5915759aa6d243
+^
+.Topics/BigDecimal/Theory/task-remote-info.yaml,1\8\1807ef744184a3f2967e9773852f69cb61f217b4
+º
+ã.idea/modules/Topics/BigDecimal/Rounding with a given precision/Number_Base_Converter.Topics-BigDecimal-Rounding_with_a_given_precision.iml,2\d\2d299c69a2cc0593f748c0215cf2c85aa1d6bbc4
+ô
+i.idea/modules/Topics/BigDecimal/Initialization/Number_Base_Converter.Topics-BigDecimal-Initialization.iml,a\0\a0d24301d940c27aecd8cb6a6ab3ce9df44d36b4
+G
+course-remote-info.yaml,8\e\8ebfd624cee09c71902f5a4e0950d589f705f81d
+R
+"Topics/BigDecimal/lesson-info.yaml,3\c\3c32ce3e93298665fe3bf832b7f1d44a8bc78c61
+V
+&Number Base Converter/lesson-info.yaml,b\9\b97f22603cf38edf84b4ccdb98ac7ac01155270d
+p
+@Topics/BigDecimal/Rounding with a given precision/task-info.yaml,1\0\10427aeb9b3399e4f346c6c23676d56e6b70e9fa
+w
+GTopics/BigDecimal/Rounding with a given precision/task-remote-info.yaml,f\7\f7def73b9154524ccddac037ff3a977f1fba796b
+é
+^.idea/modules/Topics/BigDecimal/Theory/Number_Base_Converter.Topics-BigDecimal-Theory.test.iml,7\b\7bbb28549818e9fe02a4763784f648b19462461e
+é
+^.idea/modules/Topics/BigDecimal/Theory/Number_Base_Converter.Topics-BigDecimal-Theory.main.iml,2\0\204f624aea0c342cf9c30e450d71b2b11d658018
+¡
+ê.idea/modules/Topics/BigDecimal/Rounding with a given precision/Number_Base_Converter.Topics-BigDecimal-Rounding_with_a_given_precision.test.iml,6\3\63c17533dd189a05994d16df30de74c91a84aaa5
+¡
+ê.idea/modules/Topics/BigDecimal/Rounding with a given precision/Number_Base_Converter.Topics-BigDecimal-Rounding_with_a_given_precision.main.iml,9\d\9db65476750117973214e340da242721fa02b9fc
+û
+n.idea/modules/Topics/BigDecimal/Initialization/Number_Base_Converter.Topics-BigDecimal-Initialization.test.iml,0\9\09d06534b909387d41b6266e58fa69dd0f183a84
+û
+n.idea/modules/Topics/BigDecimal/Initialization/Number_Base_Converter.Topics-BigDecimal-Initialization.main.iml,a\f\afd9306636fb5a1fee711d9e20079ab0bb220646
+â
+Y.idea/modules/Topics/BigDecimal/Theory/Number_Base_Converter.Topics-BigDecimal-Theory.iml,7\5\7513c6abc19f1a5186c71ee64367ca5d42c1c86a
+`
+0Topics/BigDecimal/Round and power/task-info.yaml,e\4\e4eb110f04b336fe590306fe8b2c992deecc214f
+g
+7Topics/BigDecimal/Round and power/task-remote-info.yaml,d\6\d63b62038b92c7e020426400baefe2ac4805b630
+U
+%Topics/BigDecimal/Average/src/Main.kt,8\8\88fb44fb01bb9a0a9f57f0e5c5475b6fcc1b8f54
+\
+,Topics/BigDecimal/Initialization/src/Main.kt,9\3\931da28b106a05e37028c221d6fc1e0b8a127522
+]
+-Topics/BigDecimal/Round and power/src/Main.kt,8\6\8639d7a02be1320c8179f4c1d2f231dfea36951f
+m
+=Topics/BigDecimal/Rounding with a given precision/src/Main.kt,c\5\c57e7e5cac94e75206bb569de84de51241db338c
+T
+$Topics/BigDecimal/Theory/src/Main.kt,c\d\cd36c4b8c79719d319e538b4f6611b0875da1b5f
+o
+?Number Base Converter/task/test/NumeralSystemConverterTest.java,e\8\e851f3292233eb620ad7e54b3d9238bdc28cd2e7
+S
+#Topics/BigDecimal/Average/task.html,4\e\4ec7f96724dbc2ef3bf57c8b4b42458a35f4f9ac
+Z
+*Topics/BigDecimal/Initialization/task.html,3\1\31c5d45645a6e675958ca38d8a07f6518974281d
+[
++Topics/BigDecimal/Round and power/task.html,a\f\afdc9d997e453a76d3ee1984a02d073da015eeef
+k
+;Topics/BigDecimal/Rounding with a given precision/task.html,9\7\97c8162d613ad41fd720c1a757c6f0e691665298
+R
+"Topics/BigDecimal/Theory/task.html,f\7\f7c3fbc82aabcceee320dd3d0d777d144a410914
+[
++Topics/Jumps and returns/Theory/src/Main.kt,5\d\5dc3dcf0ac98e9672b4f82da9446d52ff00933bd
